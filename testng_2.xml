@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite">
+
+
 	<test thread-count="5" name="Test">
-		<parameter name="Browser" value="chrome" />
-		<parameter name="Url" value="https://www.saucedemo.com/" />
 		<groups>
 			<run>
 				<include name="regression" />
 			</run>
 		</groups>
+
+
+		<parameter name="Browser" value="chrome" />
+		<parameter name="Url" value="https://www.saucedemo.com/" />
 		<classes>
 			<class name="TestProject.testClass" />
 		</classes>

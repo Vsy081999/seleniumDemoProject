@@ -1,5 +1,7 @@
 package TestProject;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
@@ -17,31 +19,22 @@ public class testClass extends BaseClass {
 		lg.getUsername().sendKeys("standard_user");
 		lg.getPassword().sendKeys("secret_sauce");
 		lg.getLoginbuton().click();
-	
-	
-//		driver.findElement(By.id("user-name")).sendKeys("standard_user");
-//		driver.findElement(By.id("password")).sendKeys("secret_sauce");
-//		driver.findElement(By.id("login-button")).click();
 
 	}
 
 	@Test(groups = { "sanity" })
 	public void Step2() {
 		System.out.println("Step2   : sanity");
-		HomePage hm= new HomePage(driver);
-		
-//		String text=hm.homepagetext();
-//		System.out.println("text  :"+text);
-		
+		HomePage hm = new HomePage(driver);
+
 		System.out.println(hm.homepagetext());
-		
-		
-		
+
 	}
 
 	@Test(groups = { "sanity" })
 	public void Step3() {
 		System.out.println("Step3   : sanity");
+
 	}
 
 	@Test(groups = { "regression" })
