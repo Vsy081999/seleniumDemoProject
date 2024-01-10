@@ -4,14 +4,10 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="Url" value="https://www.saucedemo.com/"/>
     <parameter name="Browser" value="chrome"/>
-    <groups>
-      <run>
-        <include name="sanity"/>
-      </run>
-    </groups>
     <classes>
       <class name="TestProject.testClass">
         <methods>
+          <include name="LauchBrowser"/>
           <include name="Step2"/>
           <include name="Step1"/>
         </methods>

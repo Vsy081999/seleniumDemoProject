@@ -15,7 +15,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClass {
 	WebDriver driver;
 
-	@BeforeSuite
+	@BeforeClass
 	@Parameters({ "Browser", "Url" })
 	public void LauchBrowser(String Browser, String Url) {
 
@@ -26,9 +26,6 @@ public class BaseClass {
 		driver.get(Url);
 		
 		
-		for (int i = 0; i < 5; i++) {
-			System.out.println("Hello world");
-		}
 		
 		
 
