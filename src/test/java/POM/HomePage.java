@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
 
-	WebDriver driver;
+	public WebDriver driver;
 
-	@FindBy(xpath = "(//*[contains(text(),'Swag Labs')])[2]")
+	@FindBy(xpath = "//*[contains(text(),'Products1')]")
 	private WebElement Homepage;
 
 	public HomePage(WebDriver driver) {

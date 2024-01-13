@@ -5,7 +5,9 @@
     <classes>
       <class name="TestProject.testClass">
         <methods>
-          <include name="login"/>
+          <include name="TC_02"/>
+          <include name="TC_01"/>
+          <include name="teardown"/>
           <include name="LauchBrowser"/>
         </methods>
       </class> <!-- TestProject.testClass -->
