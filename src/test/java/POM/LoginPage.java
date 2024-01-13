@@ -19,10 +19,10 @@ public class LoginPage {
 
 	@FindBy(id = "login-button")
 	private WebElement loginbuton;
-//
-//	@FindBy(xpath = "//*[contains(text(),'Epic sadface')]")
-//	private WebElement errorMsg;
-//
+
+	@FindBy(xpath = "//*[contains(text(),'Epic sadface')]")
+	private WebElement errorMsg;
+
 //	@FindBy(xpath = "(//*[local-name()='svg' ]/*[local-name()='path'])[3]")
 //	private WebElement errorMsgcloseBtton;
 
