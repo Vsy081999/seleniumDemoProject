@@ -9,10 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
-	public WebDriver driver;
+	public WebDriver Idriver;
 
 	@FindBy(id = "user-name")
-	private WebElement username;
+	WebElement username;
 
 	@FindBy(id = "password")
 	private WebElement password;
@@ -23,16 +23,20 @@ public class LoginPage {
 	@FindBy(xpath = "//*[contains(text(),'Epic sadface')]")
 	private WebElement errorMsg;
 
-//	@FindBy(xpath = "(//*[local-name()='svg' ]/*[local-name()='path'])[3]")
-//	private WebElement errorMsgcloseBtton;
+	@FindBy(xpath = "(//*[local-name()='svg' ]/*[local-name()='path'])[3]")
+	private WebElement errorMsgcloseBtton;
 
 	public LoginPage(WebDriver driver) {
-		this.driver = driver;
+		this.Idriver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
 	public WebElement getUsername() {
 		return username;
+	}
+	
+	public void enterUsername(String user) {
+		username.sendKeys(user);
 	}
 
 	public WebElement getPassword() {
@@ -43,12 +47,16 @@ public class LoginPage {
 		return loginbuton;
 	}
 
-//	public WebElement getError() {
-//		return errorMsg;
-//	}
-//
-//	public WebElement getErrorMsgcloseBtton() {
-//		return errorMsgcloseBtton;
-//	}
+	public WebElement getError() {
+		return errorMsg;
+	}
 
+	public WebElement getErrorMsgcloseBtton() {
+		return errorMsgcloseBtton;
+	}
+
+	
+
+	
+	
 }

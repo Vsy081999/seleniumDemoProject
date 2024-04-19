@@ -16,19 +16,20 @@ import POM.LoginPage;
 
 public class testClass extends BaseClass {
 
-	@Test
-	public void TC_01() throws IOException {
+	@Test(priority=1)
+	public void login() throws IOException, InterruptedException {
 		LoginPage lg = new LoginPage(driver);
+
 		lg.getUsername().sendKeys("standard_user");
+//		lg.enterUsername("standard_user");
+		Thread.sleep(2000);
 		lg.getPassword().sendKeys("secret_sauce");
 		lg.getLoginbuton().click();
 	}
 
-	@Test
-	public void TC_02() throws IOException {
+	@Test(priority=2)
+	public void HomePage() throws IOException {
 		HomePage hm = new HomePage(driver);
 		System.out.println(hm.homepagetext());
-
 	}
-
 }
