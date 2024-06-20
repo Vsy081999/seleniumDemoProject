@@ -5,12 +5,11 @@
     <classes>
       <class name="TestProject.testClass">
         <methods>
-          <include name="tearDown"/>
+          <include name="teardown"/>
           <include name="login"/>
           <include name="LauchBrowser"/>
-          <include name="report"/>
-          <include name="addrport"/>
-          <include name="captureScreenShot"/>
+          <include name="tearDownMethod"/>
+          <include name="setUpSuite"/>
         </methods>
       </class> <!-- TestProject.testClass -->
     </classes>

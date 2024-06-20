@@ -53,12 +53,10 @@ public class BaseClass  {
 		extentreport.setSystemInfo("OS", "windows 11");
 		extentreport.setSystemInfo("browser:", "chrome");
 		extentreport.setSystemInfo("user name:", "Vishwanath");
-
 		// configuration to change look and feel of report
 		sparkReporter.config().setDocumentTitle("Extent Listener Report Demo");
 		sparkReporter.config().setReportName("This is my First Report");
 		sparkReporter.config().setTheme(Theme.DARK);
-
 	}
 
 	@BeforeClass
@@ -75,9 +73,6 @@ public class BaseClass  {
 	public void tearDownMethod(ITestResult result) throws IOException {
 		String scriptName = result.getMethod().getMethodName();
 		if (result.getStatus() == ITestResult.FAILURE) {
-//			extentreport.createTest(scriptName +" This is for attaching screenshots").info("This is info msg")
-//					.addScreenCaptureFromPath(Utility.getScreenshot(driver, scriptName));
-		
 			extentreport.createTest(scriptName +" This is for attaching screenshots").fail(scriptName)
 			.addScreenCaptureFromPath(Utility.getScreenshot(driver, scriptName));
 

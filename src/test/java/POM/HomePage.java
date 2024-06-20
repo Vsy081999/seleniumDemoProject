@@ -7,13 +7,17 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
 
-	public WebDriver driver;
+	public WebDriver Idriver;
 
 	@FindBy(xpath = "//*[contains(text(),'Products1')]")
 	private WebElement Homepage;
+	
+	@FindBy(xpath = "//*[contains(text(),'Sauce Labs Bike Light')]")
+	private WebElement ProductName;
+	
 
 	public HomePage(WebDriver driver) {
-		this.driver = driver;
+		this.Idriver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
@@ -21,4 +25,10 @@ public class HomePage {
 		return Homepage.getText();
 	}
 
+	public WebElement ProductName() {
+		return ProductName;
+	}
+
+		
+	
 }
